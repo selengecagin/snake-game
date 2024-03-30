@@ -2,6 +2,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.security.KeyStore;
 import java.util.Random;
 import javax.swing.JPanel;
 
@@ -16,14 +17,17 @@ public class GamePanel extends JPanel implements ActionListener {
     //delay parameter will be used for controlling game speed or animations
     static final int DELAY= 75;
 
-    //coordinates
+    //coordinates for snake
     final int x[] =new int[GAME_UNITS];
     final int y[] =new int[GAME_UNITS];
     int bodyParts = 6;
     int applesEaten;
+
+    //coordinates of apples, will appear randomly when snake eats an apple
     int appleX;
     int appleY;
     char direction = 'R'; // R-L,U-D
+
     boolean running =false;
     Timer timer;
     Random random;
@@ -38,8 +42,11 @@ public class GamePanel extends JPanel implements ActionListener {
         startGame();
     }
 
-
     public void startGame(){
+        newApple();
+        running = true;
+        timer = new Timer(DELAY,this); //this, because we are listening the ActionListener interface
+        timer.start();
     }
 
     public void paintComponent(Graphics g){
