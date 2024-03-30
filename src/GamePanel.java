@@ -30,6 +30,11 @@ public class GamePanel extends JPanel implements ActionListener {
 
     }
 
+
+    public void gameOver(Graphics g){
+
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
     }
