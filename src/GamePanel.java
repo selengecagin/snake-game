@@ -18,13 +18,17 @@ public class GamePanel extends JPanel implements ActionListener {
     public void draw(Graphics g){
 
     }
-public void move(){
+    public void move(){
 
-}
+    }
 
-public void checkApple(){
+    public void checkApple(){
 
-}
+    }
+
+    public void checkCollisions(){
+
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
