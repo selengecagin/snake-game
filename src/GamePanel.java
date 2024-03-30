@@ -103,13 +103,16 @@ public class GamePanel extends JPanel implements ActionListener {
                 x[0]=x[0]+UNIT_SIZE;
                 break;
         }
-
     }
 
     public void checkApple(){
+    if((x[0]== appleX)&&(y[0]==appleY)){
+    bodyParts++;
+    applesEaten++;
+    newApple();
+}
 
     }
-
     public void checkCollisions(){
         //checks if head collides with body
     for(int i = bodyParts; i>0;i--){
@@ -136,7 +139,6 @@ public class GamePanel extends JPanel implements ActionListener {
         if(!running){
             timer.stop();
         }
-
     }
 
     public void gameOver(Graphics g){
