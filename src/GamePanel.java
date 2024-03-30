@@ -16,6 +16,18 @@ public class GamePanel extends JPanel implements ActionListener {
     //delay parameter will be used for controlling game speed or animations
     static final int DELAY= 75;
 
+    //coordinates
+    final int x[] =new int[GAME_UNITS];
+    final int y[] =new int[GAME_UNITS];
+    int bodyParts = 6;
+    int applesEaten;
+    int appleX;
+    int appleY;
+    char direction = 'R'; // R-L,U-D
+    boolean running =false;
+    Timer timer;
+    Random random;
+
     GamePanel(){
         //constructor
     }
