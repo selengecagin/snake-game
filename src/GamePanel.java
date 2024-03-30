@@ -1,11 +1,15 @@
-import javax.swing.*;
+
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.Random;
+import javax.swing.JPanel;
 
 public class GamePanel extends JPanel implements ActionListener {
 
+
     GamePanel(){
+        //constructor
     }
 
     public void startGame(){
@@ -30,7 +34,6 @@ public class GamePanel extends JPanel implements ActionListener {
 
     }
 
-
     public void gameOver(Graphics g){
 
     }
@@ -38,4 +41,14 @@ public class GamePanel extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
     }
+
+    public class MyKeyAdapter extends KeyAdapter {
+
+        @Override
+        public void keyPressed(KeyEvent e){
+
+        }
+    }
+
+
 }
