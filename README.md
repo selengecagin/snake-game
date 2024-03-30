@@ -1,9 +1,9 @@
 Snake Game
 
-Overview
+Overview:
 A Java-based Snake Game using javax.swing for GUI. Players control a snake to eat apples, growing in length with each apple eaten, while avoiding collisions with the game borders or itself.
 
-Features
+Features:
 Game Area: 600x600 pixels, with each unit being 25x25 pixels.
 Game Mechanics:
 - Snake grows upon eating apples.
@@ -14,7 +14,7 @@ End Game: Colliding with the border or the snake itself ends the game.
 Class GamePanel:
 Implements the main game area, handling game logic, rendering, and input.
 
-Key Components
+Key Components:
 Variables: Store game state, snake coordinates, and apple position.
 Constructor: Sets up the game environment.
 Methods:
